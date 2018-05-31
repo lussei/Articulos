@@ -8,6 +8,8 @@ import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.reindex.ScrollableHitSource;
+import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import com.google.gson.Gson;
@@ -55,8 +57,10 @@ public class Articulos {
         try {
             if(resp != null) {
                 SearchHits hits = resp.getHits();
-                for (int i = 0; i <= hits.totalHits; i++)
-                    response.add(new Gson().fromJson(hits.getAt(i).getSourceAsString(), Articulo.class));
+                for (SearchHit hit : hits) {
+
+                    response.add(new Gson().fromJson(hit.getSourceAsString(), Articulo.class));
+                }
             }
 
         }catch (Exception e){
