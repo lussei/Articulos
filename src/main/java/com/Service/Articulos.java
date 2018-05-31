@@ -7,7 +7,7 @@ import com.Error.Mensajes;
 import java.util.ArrayList;
 
 public class Articulos {
-    com.DataAccess.Articulos da;
+    private com.DataAccess.Articulos da;
     public Articulos(){
         try {
             da = new com.DataAccess.Articulos();

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class Articulos {
 
-    TransportClient client;
+    private TransportClient client;
 
     public Articulos() throws  Exception{
         try {
@@ -29,6 +29,7 @@ public class Articulos {
 
         }
         catch(Exception e){
+            e.printStackTrace();
             throw e;
         }
 
@@ -46,7 +47,7 @@ public class Articulos {
 
 
     public ArrayList<Articulo> get(Articulo articulo){
-        ArrayList<Articulo> response = new ArrayList<Articulo>();
+        ArrayList<Articulo> response = new ArrayList<>();
         SearchRequestBuilder qb =  client.prepareSearch("articulos");
         qb.setSize(1000);
         if(articulo != null) qb = qb.setQuery(QueryBuilders.matchQuery("id", articulo.getId()));

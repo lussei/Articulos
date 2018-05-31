@@ -115,11 +115,11 @@ public class Articulos {
 
 
 
-    public static Articulo[] GetArticulo(String id) throws Exception{
+    private static Articulo[] GetArticulo(String id) throws Exception{
 
         OkHttpClient client = new OkHttpClient();
         String url = "http://localhost:8080/articulos";
-        if(id != "")
+        if(!id.equals(""))
             url = url + "/" + id;
 
 
@@ -134,11 +134,13 @@ public class Articulos {
             com.squareup.okhttp.Response response = client.newCall(request).execute();
             String result = response.body().string();
             StandardResponse sresp = new Gson().fromJson(result, StandardResponse.class);
-            Articulo[] a = new Gson().fromJson(sresp.getData(), Articulo[].class);
+            Articulo[] ret = new Gson().fromJson(sresp.getData(), Articulo[].class);
 
-            return a;
+            return ret;
 
-        }catch(Exception e){throw e;}
+        }catch(Exception e){
+            e.printStackTrace();
+            throw e;}
 
     }
 
@@ -147,13 +149,13 @@ public class Articulos {
     }
 
 
-    public  static String procesarValidacion(Exception e, Response response){
+    private   static String procesarValidacion(Exception e, Response response){
         e.printStackTrace();
         String Mensaje="";
         response.status(HttpResponseStatus.INTERNAL_SERVER_ERROR.code());
         return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJsonTree(e.getMessage() )));
     }
-    public  static String procesarError(Exception e, Response response){
+    private   static String procesarError(Exception e, Response response){
         e.printStackTrace();
         String Mensaje="";
         response.status(HttpResponseStatus.INTERNAL_SERVER_ERROR.code());
