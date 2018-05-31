@@ -1,0 +1,21 @@
+<script src="//code.jquery.com/jquery-1.12.2.min.js"></script>
+<script src="https://www.jqueryscript.net/demo/Simple-JSON-Beautifier-With-jQuery-CSS-CSS3-Beautify-json/jquery.beautify-json.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.jqueryscript.net/demo/Simple-JSON-Beautifier-With-jQuery-CSS-CSS3-Beautify-json/beautify-json.css">
+
+<title>Articulos</title>
+<divm id="contenido">
+    ${data}
+</divm>
+
+
+<script>
+    $('#contenido').beautifyJSON({
+
+        // highlight JSON on mouse hover
+        hoverable: true,
+
+        // enable colors
+        color: true
+
+    });
+</script>
