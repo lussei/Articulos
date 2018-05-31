@@ -1,8 +1,6 @@
 
 
-import com.Articulos.Data.Articulo;
-import com.Articulos.Error.ExcepcionValidacion;
-import com.Articulos.Service.Articulos;
+import com.Data.Articulo;
 import com.google.gson.Gson;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
@@ -10,7 +8,6 @@ import com.jayway.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.jupiter.api.Test;
-import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
 import java.text.SimpleDateFormat;
 import java.util.Date;
