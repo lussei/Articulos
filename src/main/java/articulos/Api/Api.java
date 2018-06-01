@@ -1,8 +1,9 @@
-package com.articulosRest.Api;
-import com.articulosRest.Data.Articulo;
-import com.articulosRest.Error.ExcepcionValidacion;
-import com.articulosRest.Service.StandardResponse;
-import com.articulosRest.Service.StatusResponse;
+package articulos.Api;
+
+import articulos.Data.Articulo;
+import articulos.Error.ExcepcionValidacion;
+import articulos.Service.StandardResponse;
+import articulos.Service.StatusResponse;
 import com.google.gson.Gson;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -14,12 +15,11 @@ import spark.template.velocity.VelocityTemplateEngine;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
 import static  spark.Spark.*;
-public class Articulos {
+public class Api {
 
     public  static void main(String args[]){
-       final com.articulosRest.Service.Articulos articiuloService = new com.articulosRest.Service.Articulos();
+       final articulos.Service.Articulos articiuloService = new articulos.Service.Articulos();
         port(8080);
 
 

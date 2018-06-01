@@ -1,6 +1,6 @@
 
 
-import com.articulos.Data.Articulo;
+import articulos.Data.Articulo;
 import com.google.gson.Gson;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;

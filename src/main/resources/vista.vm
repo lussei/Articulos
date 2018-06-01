@@ -9,13 +9,15 @@
 
 
 <script>
-    $('#contenido').beautifyJSON({
+    $( document ).ready(function() {
+        $('#contenido').beautifyJSON({
 
-        // highlight JSON on mouse hover
-        hoverable: true,
+            // highlight JSON on mouse hover
+            hoverable: true,
 
-        // enable colors
-        color: true
+            // enable colors
+            color: true
 
-    });
+        });    });
+
 </script>

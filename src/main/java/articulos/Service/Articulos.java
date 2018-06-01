@@ -1,16 +1,16 @@
-package com.articulosRest.Service;
+package articulos.Service;
 
-import com.articulosRest.Data.Articulo;
-import com.articulosRest.Error.ExcepcionValidacion;
-import com.articulosRest.Error.Mensajes;
+import articulos.Data.Articulo;
+import articulos.Error.ExcepcionValidacion;
+import articulos.Error.Mensajes;
 
 import java.util.ArrayList;
 
 public class Articulos {
-    private com.articulosRest.DataAccess.Articulos da;
+    private articulos.DataAccess.Articulos da;
     public Articulos(){
         try {
-            da = new com.articulosRest.DataAccess.Articulos();
+            da = new articulos.DataAccess.Articulos();
         }catch (Exception e){
             e.printStackTrace();
         }

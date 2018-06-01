@@ -1,4 +1,4 @@
-package com.articulosRest.Error;
+package articulos.Error;
 
 public class ExcepcionValidacion extends Exception
 {

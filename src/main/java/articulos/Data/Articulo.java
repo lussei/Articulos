@@ -1,4 +1,4 @@
-package com.articulosRest.Data;
+package articulos.Data;
 
 import java.util.Date;
 

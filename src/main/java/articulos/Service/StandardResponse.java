@@ -1,4 +1,4 @@
-package com.articulosRest.Service;
+package articulos.Service;
 
 import com.google.gson.JsonElement;
 

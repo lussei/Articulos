@@ -1,4 +1,4 @@
-package com.articulosRest.Error;
+package articulos.Error;
 
 public enum Mensajes {
     ARTICULO_EXISTE("El articulo ya existe."),
