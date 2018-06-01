@@ -9,8 +9,8 @@ Api Restful para el manejo de articulos implementado en Apache Spark con persist
 ### Operaciones:
 #### POST (Agrega un nuevo articulo)
 ```bash
-          curl -X POST \
-            http://localhost:8080/articulos \
+          curl -X POST 
+            http://localhost:8080/articulos 
             -d '{
             "id": "MLA608007087",
             "site_id": "MLA",
